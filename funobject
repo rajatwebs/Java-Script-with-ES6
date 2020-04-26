@@ -1,0 +1,52 @@
+// var testobj1 = {
+//   1: "rose",
+//   2:"merigold",
+//   3:"dasy"
+// }
+// var testobj2 = {
+//   1: "red",
+//   2:"yellow",
+//   3:"white"
+// }
+// var testobj3 = {
+//   1: "love",
+//   2:"good",
+//   3:"nice"
+// }
+// var action = 1;
+// var actiontest = testobj3[action];
+// console.log(actiontest);
+
+// var color = 1;
+// var colortest = testobj2[color];
+// console.log(colortest);
+
+// var flower = 1;
+// var testflower = testobj1[flower];
+// console.log(testflower);
+
+var MyIndustries=
+[
+        {
+          type:"Software Training",
+          list:[
+                "RB Computer Training Centre",
+                "RB Programming Training",
+                "RB Digital Marketing"
+               ]
+        },
+         {
+          type:"Hosting and Web Development",
+          list:[
+                "RB Web Hosting",
+                "RB Web Designing",
+                "RB Web Application and Aps Development"
+               ]
+        }
+          
+      
+];
+
+var WebIndustries = MyIndustries[1].list[1]
+
+console.log(WebIndustries);
