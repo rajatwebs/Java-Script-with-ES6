@@ -1,52 +1,552 @@
-// var testobj1 = {
-//   1: "rose",
-//   2:"merigold",
-//   3:"dasy"
-// }
-// var testobj2 = {
-//   1: "red",
-//   2:"yellow",
-//   3:"white"
-// }
-// var testobj3 = {
-//   1: "love",
-//   2:"good",
-//   3:"nice"
-// }
-// var action = 1;
-// var actiontest = testobj3[action];
-// console.log(actiontest);
+/*****************************
+* Variables and data types
+*/
+/*
+var firstName = 'Rajat';
+console.log(firstName);
 
-// var color = 1;
-// var colortest = testobj2[color];
-// console.log(colortest);
+var lastName = 'Smith';
+var age = 28;
 
-// var flower = 1;
-// var testflower = testobj1[flower];
-// console.log(testflower);
+var fullAge = true;
+console.log(fullAge);
 
-var MyIndustries=
-[
-        {
-          type:"Software Training",
-          list:[
-                "RB Computer Training Centre",
-                "RB Programming Training",
-                "RB Digital Marketing"
-               ]
-        },
-         {
-          type:"Hosting and Web Development",
-          list:[
-                "RB Web Hosting",
-                "RB Web Designing",
-                "RB Web Application and Aps Development"
-               ]
-        }
+var job;
+console.log(job);
+
+job = 'Teacher';
+console.log(job);
+
+// Variable naming rules
+var _3years = 3;
+var RajatMark = 'Rajat and MArk';
+var if = 23;
+*/
+
+
+
+/*****************************
+* Variable mutation and type coercion
+*/
+/*
+var firstName = 'Rajat';
+var age = 28;
+
+// Type coercion
+console.log(firstName + ' ' + age);
+
+var job, isMarried;
+job = 'teacher';
+isMarried = false;
+
+console.log(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+
+// Variable mutation
+age = 'twenty eight';
+job = 'driver';
+
+alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+
+var lastName = prompt('What is his last Name?');
+console.log(firstName + ' ' + lastName);
+*/
+
+
+
+/*****************************
+* Basic operators
+*/
+/*
+var year, yearRajat, yearMark;
+now = 2020;
+ageRajat = 28;
+ageMark = 33;
+
+// Math operators
+yearRajat = now - ageRajat;
+yeahMark = now - ageMark;
+
+console.log(yearRajat);
+
+console.log(now + 2);
+console.log(now * 2);
+console.log(now / 10);
+
+
+// Logical operators
+var RajatOlder = ageRajat < ageMark;
+console.log(RajatOlder);
+
+
+// typeof operator
+console.log(typeof RajatOlder);
+console.log(typeof ageRajat);
+console.log(typeof 'Mark is older tha Rajat');
+var x;
+console.log(typeof x);
+*/
+
+
+
+/*****************************
+* Operator precedence
+*/
+/*
+var now = 2020;
+var yearRajat = 1989;
+var fullAge = 18;
+
+// Multiple operators
+var isFullAge = now - yearRajat >= fullAge; // true
+console.log(isFullAge);
+
+// Grouping
+var ageRajat = now - yearRajat;
+var ageMark = 35;
+var average = (ageRajat + ageMark) / 2;
+console.log(average);
+
+// Multiple assignments
+var x, y;
+x = y = (3 + 5) * 4 - 6; // 8 * 4 - 6 // 32 - 6 // 26
+console.log(x, y);
+
+
+// More operators
+x *= 2;
+console.log(x);
+x += 10;
+console.log(x);
+x--;
+console.log(x);
+*/
+
+/*****************************
+* If / else statements
+*/
+/*
+var firstName = 'Rajat';
+var civilStatus = 'single';
+
+if (civilStatus === 'married') {
+    console.log(firstName + ' is married!');
+} else {
+    console.log(firstName + ' will hopefully marry soon :)');
+}
+
+
+var isMarried = true;
+if (isMarried) {
+    console.log(firstName + ' is married!');
+} else {
+    console.log(firstName + ' will hopefully marry soon :)');
+}
+
+var massMark = 78; // kg
+var heightMark = 1.69; // meters
+
+var massRajat = 92;
+var heightRajat = 1.95;
+
+var BMIMark = massMark / (heightMark * heightMark);
+var BMIRajat = massRajat / (heightRajat * heightRajat);
+
+if (BMIMark > BMIRajat) {
+    console.log('Mark\'s BMI is higher than Rajat\'s.');
+} else {
+    console.log('Rajat\'s BMI is higher than Marks\'s.');
+}
+*/
+
+
+
+/*****************************
+* Boolean logic
+*/
+/*
+var firstName = 'Rajat';
+var age = 20;
+
+if (age < 13) {
+    console.log(firstName + ' is a boy.');
+} else if (age >= 13 && age < 20) {
+    console.log(firstName + ' is a teenager.');
+} else if (age >= 20 && age < 30) {
+    console.log(firstName + ' is a young man.');
+} else {
+    console.log(firstName + ' is a man.');
+}
+*/
+
+
+
+/*****************************
+* The Ternary Operator and Switch Statements
+*/
+/*
+var firstName = 'Rajat';
+var age = 14;
+
+// Ternary operator
+age >= 18 ? console.log(firstName + ' drinks beer.') : console.log(firstName + ' drinks juice.');
+
+var drink = age >= 18 ? 'beer' : 'juice';
+console.log(drink);
+
+(if (age >= 18) {
+    var drink = 'beer';
+} else {
+    var drink = 'juice';
+}
+
+// Switch statement
+var job = 'instructor';
+switch (job) {
+    case 'teacher':
+    case 'instructor':
+        console.log(firstName + ' teaches kids how to code.');
+        break;
+    case 'driver':
+        console.log(firstName + ' drives an uber in Lisbon.');
+        break;
+    case 'designer':
+        console.log(firstName + ' designs beautiful websites.');
+        break;
+    default:
+        console.log(firstName + ' does something else.');
+}
+
+age = 56;
+switch (true) {
+    case age < 13:
+        console.log(firstName + ' is a boy.');
+        break;
+    case age >= 13 && age < 20:
+        console.log(firstName + ' is a teenager.');
+        break;
+    case age >= 20 && age < 30:
+        console.log(firstName + ' is a young man.');
+        break;
+    default:
+        console.log(firstName + ' is a man.');
+}
+*/
+
+
+
+/*****************************
+* Truthy and Falsy values and equality operators
+*/
+/*
+// falsy values: undefined, null, 0, '', NaN
+// truthy values: NOT falsy values
+
+var height;
+
+height = 23;
+
+if (height || height === 0) {
+    console.log('Variable is defined');
+} else {
+    console.log('Variable has NOT been defined');
+}
+
+// Equality operators
+if (height === '23') {
+    console.log('The == operator does type coercion!');
+}
+*/
+/*****************************
+* Functions
+*/
+/*
+
+function calculateAge(birthYear) {
+    return 2020 - birthYear;
+}
+
+var ageRajat = calculateAge(1990);
+var ageSukrit = calculateAge(1948);
+var ageBinod = calculateAge(1969);
+console.log(ageRajat, ageSukrit, ageBinod);
+
+
+function yearsUntilRetirement(year, firstName) {
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+    
+    if (retirement > 0) {
+        console.log(firstName + ' retires in ' + retirement + ' years.');
+    } else {
+        console.log(firstName + ' is already retired.')
+    }
+    
+}
+
+yearsUntilRetirement(2046, 'Rajat');
+yearsUntilRetirement(2048, 'Sukrit');
+yearsUntilRetirement(2069, 'Binod');
+*/
+
+
+
+/*****************************
+* Function Statements and Expressions
+*/
+/*
+// Function declaration
+// function whatDoYouDo(job, firstName) {}
+
+// Function expression
+var whatDoYouDo = function(job, firstName) {
+    switch(job) {
+        case 'teacher':
+            return firstName + ' teaches kids how to code';
+        case 'driver':
+            return firstName + ' drives a cab in Lisbon.'
+        case 'designer':
+            return firstName + ' designs beautiful websites';
+        default:
+            return firstName + ' does something else';
+    }
+}
+
+console.log(whatDoYouDo('teacher', 'Rajat'));
+console.log(whatDoYouDo('designer', 'Binod'));
+console.log(whatDoYouDo('retired', 'Mark'));
+*/
+
+
+
+/*****************************
+* Arrays
+*/
+/*
+// Initialize new array
+var names = ['Rajat', 'Mark', 'Binod'];
+var years = new Array(2050,2069,2048);
+
+console.log(names[2]);
+console.log(names.length);
+
+// Mutate array data
+names[1] = 'Ben';
+names[names.length] = 'Ajoy';
+console.log(names);
+
+// Different data types
+var Rajat = ['Rajat', 'Smith', 2050, 'designer', false];
+
+Rajat.push('blue');
+Rajat.unshift('Mr.');
+console.log(Rajat);
+
+Rajat.pop();
+Rajat.pop();
+Rajat.shift();
+console.log(Rajat);
+
+console.log(Rajat.indexOf(23));
+
+var isDesigner = Rajat.indexOf('designer') === -1 ? 'Rajat is NOT a designer' : 'Rajat IS a designer';
+console.log(isDesigner);
+*/
+
+/*****************************
+* Objects and properties
+*/
+/*
+// Object literal
+var Rajat = {
+    firstName: 'Rajat',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Binod', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+
+console.log(Rajat.firstName);
+console.log(Rajat['lastName']);
+var x = 'birthYear';
+console.log(Rajat[x]);
+
+Rajat.job = 'designer';
+Rajat['isMarried'] = true;
+console.log(Rajat);
+
+// new Object syntax
+var Binod = new Object();
+Binod.firstName = 'Binod';
+Binod.birthYear = 1969;
+Binod['lastName'] = 'Smith';
+console.log(Binod);
+*/
+
+
+
+/*****************************
+* Objects and methods
+*/
+
+# var Rajat = {
+#     firstName: 'Rajat',
+#     lastName: 'Smith',
+#     birthYear: 1992,
+#     family: ['Binod', 'Mark', 'Bob', 'Emily'],
+#     job: 'teacher',
+#     isMarried: false,
+#     calcAge: function() 
+# 	{
+#         this.age = 2020 - this.birthYear;
+#     }
+# };
+
+# Rajat.calcAge();
+# console.log(Rajat);
+# var Rajat = ['Rajat', 'Smith', 1990, 'designer', false, 'blue'];
+# for (var i = 0; i < Rajat.length; i++) {
+#     console.log(Rajat[i]);
+# }
+
+# // While loop
+# var i = 0;
+# while(i < Rajat.length) {
+#     console.log(Rajat[i]);
+#     i++;
+# }
+
+
+# // continue and break statements
+# var Rajat = ['Rajat', 'Smith', 1990, 'designer', false, 'blue'];
+
+# for (var i = 0; i < Rajat.length; i++) {
+#     if (typeof Rajat[i] !== 'string') continue;
+#     console.log(Rajat[i]);
+# }
+
+# for (var i = 0; i < Rajat.length; i++) {
+#     if (typeof Rajat[i] !== 'string') break;
+#     console.log(Rajat[i]);
+# }
+
+# // Looping backwards
+# for (var i = Rajat.length - 1; i >= 0; i--) {
+#     console.log(Rajat[i]);
+# }
+# */
+
+
+# # var testobj1 = {
+# #   1: "rose",
+# #   2:"merigold",
+# #   3:"dasy"
+# # }
+# # var testobj2 = {
+# #   1: "red",
+# #   2:"yellow",
+# #   3:"white"
+# # }
+# # var testobj3 = {
+# #   1: "love",
+# #   2:"good",
+# #   3:"nice"
+# # }
+# # var action = 1;
+# # var actiontest = testobj3[action];
+# # console.log(actiontest);
+
+# # var color = 1;
+# # var colortest = testobj2[color];
+# # console.log(colortest);
+
+# # var flower = 1;
+# # var testflower = testobj1[flower];
+# # console.log(testflower);
+
+
+
+# # var MyIndustries=
+# # [
+# #         {
+# #           type:"Software Training",
+# #           list:[
+# #                 "RB Computer Training Centre",
+# #                 "RB Programming Training",
+# #                 "RB Digital Marketing"
+# #                ]
+# #         },
+# #          {
+# #           type:"Hosting and Web Development",
+# #           list:[
+# #                 "RB Web Hosting",
+# #                 "RB Web Designing",
+# #                 "RB Web Application and Aps Development"
+# #                ]
+# #         }
           
       
-];
+# # ];
 
-var WebIndustries = MyIndustries[1].list[1]
+# # var WebIndustries = MyIndustries[1].list[1]
 
-console.log(WebIndustries);
+# # console.log(WebIndustries);
+
+
+# # WAP USING Working with JavaScript Methods
+# # var addcount = (function()
+# # {
+# #   var counter = 0;
+# #     return function()
+# #     { 
+# #     counter = counter + 1;
+# #     console.log("Total views ->"+counter);
+# #     }
+# # })();
+# # addcount();
+
+
+# # WAP to create a clouser to print the Course name and
+# # Duration where course_name is in the main section and duration mension inside the nested function.
+# # var student = (function(){
+# #   var course_name = "BCA";
+
+# #   return function(){
+# #     var duration = 6;
+# #     console.log("The course name->"+course_name+"Duration->"+duration);
+# #   }
+# # })();
+# # student();
+# # WAP to print full string using loop "var person = {fname:"Rajat Bose", lname:"Doe", age:25}; "
+# # var txt = "";
+# # var person = {fname:"Rajat Bose", lname:"Doe", age:25}; 
+# # var x;
+# # for (x in person) {
+# #   txt += person[x] + " ";
+# # }
+# # console.log("The details is as follows->"+txt);
+
+
+# # WAP to print full string BY CALLING OBJECT "var person = {fname:"Rajat Bose", lname:"Doe", age:25}; "
+# # var person = {name:"John", age:50, city:"New York"};
+# # var myArray = Object.values(person);
+# # console.log("The Details is as follows->"+myArray);
+
+
+# # WAP to create a object student1 in JavaScript and
+# # print full name using Javascript apply() Method.
+# # var student1 ={
+# # firstName:"Rajat",
+# # lastName:"Bose"
+# # }
+# # var student ={
+# #   fullName:function()
+# #   {
+# #     console.log(this.firstName + ""+this.lastName);
+    
+# #   }
+# # }
+
+# # student.fullName.apply(student1);
+
+
